@@ -1,0 +1,21 @@
+ Relacionamento das tabelas, itens que cada uma precisa
+ 
+    +---------+               +-----------+
+    |  books  |    <------    | borrowings|
+    +---------+     1:M      +-----------+
+    | id      |               | id        |
+    | title   |               | user_id   |
+    | author  |               | book_id   |
+    | publisher  |            | borrowed_at |
+    | publication_year |      | returned_at |
+    | copies_available |      +-----------+
+    +---------+
+    +--------+
+    |  users |
+    +--------+
+    | id     |
+    | name   |
+    | email  |
+    | phone  |
+    +--------+
+
