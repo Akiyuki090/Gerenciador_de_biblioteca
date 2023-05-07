@@ -1,12 +1,9 @@
 const express = require("express");
 const exphbs = require("express-handlebars");
-const con = require("./db/conn");
-const User = require("./models/User");
-const userRoutes = require("./routes/userRoutes");
+const con = require("./db/config/conn");
 
 const app = express();
 const port = 3000;
-
 
 app.engine("handlebars", exphbs.engine());
 app.set("view engine", "handlebars");
@@ -32,4 +29,3 @@ con
   .catch((error) => {
     console.log(error);
   });
-  
